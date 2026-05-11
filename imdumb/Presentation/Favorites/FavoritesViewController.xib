@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesViewController" customModule="IMDUMB" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="collectionView" destination="fcv-01" id="out-fcv"/>
+                <outlet property="emptyLabel" destination="fel-01" id="out-fel"/>
+                <outlet property="emptyIcon" destination="fei-01" id="out-fei"/>
+                <outlet property="activityIndicator" destination="fai-01" id="out-fai"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fcv-01">
+                    <rect key="frame" x="0.0" y="59" width="393" height="727"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="vertical" minimumLineSpacing="12" minimumInteritemSpacing="10" id="ffl-01">
+                        <size key="itemSize" width="115" height="210"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fei-01">
+                    <rect key="frame" x="173" y="370" width="48" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="c-fei-w"/>
+                        <constraint firstAttribute="height" constant="48" id="c-fei-h"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="0.3" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aún no tienes películas favoritas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fel-01">
+                    <rect key="frame" x="16" y="426" width="361" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fai-01">
+                    <rect key="frame" x="187" y="400" width="20" height="20"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.12941176470588237" green="0.14509803921568629" blue="0.18039215686274511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fcv-01" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="c-fcv-t"/>
+                <constraint firstItem="fcv-01" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c-fcv-l"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="trailing" secondItem="fcv-01" secondAttribute="trailing" id="c-fcv-r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fcv-01" secondAttribute="bottom" id="c-fcv-b"/>
+                <constraint firstItem="fei-01" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c-fei-cx"/>
+                <constraint firstItem="fei-01" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-30" id="c-fei-cy"/>
+                <constraint firstItem="fel-01" firstAttribute="top" secondItem="fei-01" secondAttribute="bottom" constant="12" id="c-fel-t"/>
+                <constraint firstItem="fel-01" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="c-fel-l"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="trailing" secondItem="fel-01" secondAttribute="trailing" constant="16" id="c-fel-r"/>
+                <constraint firstItem="fai-01" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c-fai-cx"/>
+                <constraint firstItem="fai-01" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="c-fai-cy"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="75"/>
+        </view>
+    </objects>
+</document>

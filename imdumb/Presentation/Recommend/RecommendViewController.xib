@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecommendViewController" customModule="IMDUMB" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="scrollView" destination="rsc-01" id="out-rsc"/>
+                <outlet property="scrollContentView" destination="rcv-01" id="out-rcv"/>
+                <outlet property="headerLabel" destination="rhl-01" id="out-rhl"/>
+                <outlet property="titleLabel" destination="rtl-01" id="out-rtl"/>
+                <outlet property="overviewLabel" destination="rol-01" id="out-rol"/>
+                <outlet property="commentTextView" destination="rtv-01" id="out-rtv"/>
+                <outlet property="confirmButton" destination="rcb-01" id="out-rcb"/>
+                <outlet property="closeButton" destination="rxb-01" id="out-rxb"/>
+                <outlet property="activityIndicator" destination="rai-01" id="out-rai"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-01">
+                    <rect key="frame" x="341" y="59" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="c-rxb-w"/>
+                        <constraint firstAttribute="height" constant="36" id="c-rxb-h"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="secondaryLabelColor"/>
+                    <connections>
+                        <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="act-rxb"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsc-01">
+                    <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-01">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recomendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhl-01">
+                                    <rect key="frame" x="16" y="16" width="361" height="26"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtl-01">
+                                    <rect key="frame" x="16" y="54" width="361" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rol-01">
+                                    <rect key="frame" x="16" y="66" width="361" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtv-01">
+                                    <rect key="frame" x="16" y="82" width="361" height="120"/>
+                                    <color key="backgroundColor" red="0.17647058823529413" green="0.19607843137254902" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="c-rtv-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcb-01">
+                                    <rect key="frame" x="16" y="218" width="361" height="50"/>
+                                    <color key="backgroundColor" red="0.90196078431372551" green="0.16078431372549021" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="c-rcb-h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <state key="normal" title="Confirmar Recomendación">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="confirmTapped:" destination="-1" eventType="touchUpInside" id="act-rcb"/>
+                                    </connections>
+                                </button>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="rai-01">
+                                    <rect key="frame" x="177" y="233" width="20" height="20"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="rhl-01" firstAttribute="top" secondItem="rcv-01" secondAttribute="top" constant="16" id="c-rhl-t"/>
+                                <constraint firstItem="rhl-01" firstAttribute="leading" secondItem="rcv-01" secondAttribute="leading" constant="16" id="c-rhl-l"/>
+                                <constraint firstItem="rcv-01" firstAttribute="trailing" secondItem="rhl-01" secondAttribute="trailing" constant="16" id="c-rhl-r"/>
+                                <constraint firstItem="rtl-01" firstAttribute="top" secondItem="rhl-01" secondAttribute="bottom" constant="12" id="c-rtl-t"/>
+                                <constraint firstItem="rtl-01" firstAttribute="leading" secondItem="rcv-01" secondAttribute="leading" constant="16" id="c-rtl-l"/>
+                                <constraint firstItem="rcv-01" firstAttribute="trailing" secondItem="rtl-01" secondAttribute="trailing" constant="16" id="c-rtl-r"/>
+                                <constraint firstItem="rol-01" firstAttribute="top" secondItem="rtl-01" secondAttribute="bottom" constant="12" id="c-rol-t"/>
+                                <constraint firstItem="rol-01" firstAttribute="leading" secondItem="rcv-01" secondAttribute="leading" constant="16" id="c-rol-l"/>
+                                <constraint firstItem="rcv-01" firstAttribute="trailing" secondItem="rol-01" secondAttribute="trailing" constant="16" id="c-rol-r"/>
+                                <constraint firstItem="rtv-01" firstAttribute="top" secondItem="rol-01" secondAttribute="bottom" constant="16" id="c-rtv-t"/>
+                                <constraint firstItem="rtv-01" firstAttribute="leading" secondItem="rcv-01" secondAttribute="leading" constant="16" id="c-rtv-l"/>
+                                <constraint firstItem="rcv-01" firstAttribute="trailing" secondItem="rtv-01" secondAttribute="trailing" constant="16" id="c-rtv-r"/>
+                                <constraint firstItem="rcb-01" firstAttribute="top" secondItem="rtv-01" secondAttribute="bottom" constant="16" id="c-rcb-t"/>
+                                <constraint firstItem="rcb-01" firstAttribute="leading" secondItem="rcv-01" secondAttribute="leading" constant="16" id="c-rcb-l"/>
+                                <constraint firstItem="rcv-01" firstAttribute="trailing" secondItem="rcb-01" secondAttribute="trailing" constant="16" id="c-rcb-r"/>
+                                <constraint firstItem="rcv-01" firstAttribute="bottom" secondItem="rcb-01" secondAttribute="bottom" constant="24" id="c-rcb-b"/>
+                                <constraint firstItem="rai-01" firstAttribute="centerX" secondItem="rcb-01" secondAttribute="centerX" id="c-rai-cx"/>
+                                <constraint firstItem="rai-01" firstAttribute="centerY" secondItem="rcb-01" secondAttribute="centerY" id="c-rai-cy"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="rcv-01" firstAttribute="top" secondItem="rsc-01" secondAttribute="top" id="c-rcv-t"/>
+                        <constraint firstItem="rcv-01" firstAttribute="leading" secondItem="rsc-01" secondAttribute="leading" id="c-rcv-l"/>
+                        <constraint firstItem="rsc-01" firstAttribute="trailing" secondItem="rcv-01" secondAttribute="trailing" id="c-rcv-r"/>
+                        <constraint firstItem="rsc-01" firstAttribute="bottom" secondItem="rcv-01" secondAttribute="bottom" id="c-rcv-b"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.12941176470588237" green="0.14509803921568629" blue="0.18039215686274511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rxb-01" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="c-rxb-t"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="trailing" secondItem="rxb-01" secondAttribute="trailing" constant="16" id="c-rxb-r"/>
+                <constraint firstItem="rsc-01" firstAttribute="top" secondItem="rxb-01" secondAttribute="bottom" constant="8" id="c-rsc-t"/>
+                <constraint firstItem="rsc-01" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c-rsc-l"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="trailing" secondItem="rsc-01" secondAttribute="trailing" id="c-rsc-r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rsc-01" secondAttribute="bottom" id="c-rsc-b"/>
+                <constraint firstItem="rcv-01" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="c-rcv-w"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="75"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

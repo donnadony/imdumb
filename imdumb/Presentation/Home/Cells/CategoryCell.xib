@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cell-01" customClass="CategoryCell" customModule="IMDUMB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="content-01">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cat-lbl-01">
+                        <rect key="frame" x="16" y="0.0" width="361" height="30"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="col-vw-01">
+                        <rect key="frame" x="0.0" y="38" width="393" height="232"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="flow-01">
+                            <size key="itemSize" width="130" height="230"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="cat-lbl-01" firstAttribute="top" secondItem="content-01" secondAttribute="top" id="top-lbl"/>
+                    <constraint firstItem="cat-lbl-01" firstAttribute="leading" secondItem="content-01" secondAttribute="leading" constant="16" id="lead-lbl"/>
+                    <constraint firstItem="content-01" firstAttribute="trailing" secondItem="cat-lbl-01" secondAttribute="trailing" constant="16" id="trail-lbl"/>
+                    <constraint firstItem="col-vw-01" firstAttribute="top" secondItem="cat-lbl-01" secondAttribute="bottom" constant="8" id="top-col"/>
+                    <constraint firstItem="col-vw-01" firstAttribute="leading" secondItem="content-01" secondAttribute="leading" id="lead-col"/>
+                    <constraint firstItem="content-01" firstAttribute="trailing" secondItem="col-vw-01" secondAttribute="trailing" id="trail-col"/>
+                    <constraint firstItem="content-01" firstAttribute="bottom" secondItem="col-vw-01" secondAttribute="bottom" id="bot-col"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="categoryNameLabel" destination="cat-lbl-01" id="cat-lbl-out"/>
+                <outlet property="moviesCollectionView" destination="col-vw-01" id="col-vw-out"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="75"/>
+        </collectionViewCell>
+    </objects>
+</document>

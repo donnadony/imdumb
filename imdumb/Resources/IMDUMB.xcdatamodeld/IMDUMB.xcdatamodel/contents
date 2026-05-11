@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22505" systemVersion="24F74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FavoriteMovieEntity" representedClassName="FavoriteMovieEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="movieId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="posterPath" optional="YES" attributeType="String"/>
+        <attribute name="voteAverage" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="releaseDate" attributeType="String" defaultValueString=""/>
+        <attribute name="addedAt" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="RecommendationEntity" representedClassName="RecommendationEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="movieId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="movieTitle" attributeType="String" defaultValueString=""/>
+        <attribute name="comment" attributeType="String" defaultValueString=""/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+</model>

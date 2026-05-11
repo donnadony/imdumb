@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="IMDUMB" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="scrollView" destination="scv-01" id="out-scv"/>
+                <outlet property="scrollContentView" destination="ctv-01" id="out-ctv"/>
+                <outlet property="carouselCollectionView" destination="ccv-01" id="out-ccv"/>
+                <outlet property="pageControl" destination="pgc-01" id="out-pgc"/>
+                <outlet property="titleLabel" destination="ttl-01" id="out-ttl"/>
+                <outlet property="ratingStarImageView" destination="rst-01" id="out-rst"/>
+                <outlet property="ratingLabel" destination="rtl-01" id="out-rtl"/>
+                <outlet property="metaLabel" destination="mtl-01" id="out-mtl"/>
+                <outlet property="overviewLabel" destination="ovl-01" id="out-ovl"/>
+                <outlet property="castHeaderLabel" destination="chl-01" id="out-chl"/>
+                <outlet property="castCollectionView" destination="csv-01" id="out-csv"/>
+                <outlet property="bottomContainer" destination="btc-01" id="out-btc"/>
+                <outlet property="recommendButton" destination="rcb-01" id="out-rcb"/>
+                <outlet property="backButton" destination="bkb-01" id="out-bkb"/>
+                <outlet property="favoriteButton" destination="fvb-01" id="out-fvb"/>
+                <outlet property="activityIndicator" destination="aci-01" id="out-aci"/>
+                <outlet property="recommendationsHeaderLabel" destination="rhl-02" id="out-rhl"/>
+                <outlet property="recommendationsContentLabel" destination="rcl-02" id="out-rcl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scv-01">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="786"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctv-01">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ccv-01">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="220"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="220" id="c-ccv-h"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0" minimumInteritemSpacing="0" id="cfl-01">
+                                        <size key="itemSize" width="393" height="220"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-01">
+                                    <rect key="frame" x="144" y="224" width="105" height="14"/>
+                                </pageControl>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-01">
+                                    <rect key="frame" x="16" y="250" width="361" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rst-01">
+                                    <rect key="frame" x="16" y="258" width="18" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="18" id="c-rst-w"/>
+                                        <constraint firstAttribute="height" constant="18" id="c-rst-h"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtl-01">
+                                    <rect key="frame" x="40" y="258" width="40" height="19"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="textColor" systemColor="systemYellowColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtl-01">
+                                    <rect key="frame" x="16" y="284" width="361" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovl-01">
+                                    <rect key="frame" x="16" y="309" width="361" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reparto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chl-01">
+                                    <rect key="frame" x="16" y="325" width="361" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="csv-01">
+                                    <rect key="frame" x="0.0" y="354" width="393" height="120"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="120" id="c-csv-h"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="csf-01">
+                                        <size key="itemSize" width="80" height="110"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recomendaciones" hidden="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhl-02">
+                                    <rect key="frame" x="16" y="490" width="361" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" hidden="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcl-02">
+                                    <rect key="frame" x="16" y="519" width="361" height="0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="0.7" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="ccv-01" firstAttribute="top" secondItem="ctv-01" secondAttribute="top" id="c-ccv-t"/>
+                                <constraint firstItem="ccv-01" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" id="c-ccv-l"/>
+                                <constraint firstItem="ctv-01" firstAttribute="trailing" secondItem="ccv-01" secondAttribute="trailing" id="c-ccv-r"/>
+                                <constraint firstItem="pgc-01" firstAttribute="top" secondItem="ccv-01" secondAttribute="bottom" constant="4" id="c-pgc-t"/>
+                                <constraint firstItem="pgc-01" firstAttribute="centerX" secondItem="ctv-01" secondAttribute="centerX" id="c-pgc-cx"/>
+                                <constraint firstItem="ttl-01" firstAttribute="top" secondItem="pgc-01" secondAttribute="bottom" constant="12" id="c-ttl-t"/>
+                                <constraint firstItem="ttl-01" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" constant="16" id="c-ttl-l"/>
+                                <constraint firstItem="ctv-01" firstAttribute="trailing" secondItem="ttl-01" secondAttribute="trailing" constant="16" id="c-ttl-r"/>
+                                <constraint firstItem="rst-01" firstAttribute="top" secondItem="ttl-01" secondAttribute="bottom" constant="8" id="c-rst-t"/>
+                                <constraint firstItem="rst-01" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" constant="16" id="c-rst-l"/>
+                                <constraint firstItem="rtl-01" firstAttribute="leading" secondItem="rst-01" secondAttribute="trailing" constant="6" id="c-rtl-l"/>
+                                <constraint firstItem="rtl-01" firstAttribute="centerY" secondItem="rst-01" secondAttribute="centerY" id="c-rtl-cy"/>
+                                <constraint firstItem="mtl-01" firstAttribute="top" secondItem="rst-01" secondAttribute="bottom" constant="8" id="c-mtl-t"/>
+                                <constraint firstItem="mtl-01" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" constant="16" id="c-mtl-l"/>
+                                <constraint firstItem="ctv-01" firstAttribute="trailing" secondItem="mtl-01" secondAttribute="trailing" constant="16" id="c-mtl-r"/>
+                                <constraint firstItem="ovl-01" firstAttribute="top" secondItem="mtl-01" secondAttribute="bottom" constant="12" id="c-ovl-t"/>
+                                <constraint firstItem="ovl-01" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" constant="16" id="c-ovl-l"/>
+                                <constraint firstItem="ctv-01" firstAttribute="trailing" secondItem="ovl-01" secondAttribute="trailing" constant="16" id="c-ovl-r"/>
+                                <constraint firstItem="chl-01" firstAttribute="top" secondItem="ovl-01" secondAttribute="bottom" constant="16" id="c-chl-t"/>
+                                <constraint firstItem="chl-01" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" constant="16" id="c-chl-l"/>
+                                <constraint firstItem="ctv-01" firstAttribute="trailing" secondItem="chl-01" secondAttribute="trailing" constant="16" id="c-chl-r"/>
+                                <constraint firstItem="csv-01" firstAttribute="top" secondItem="chl-01" secondAttribute="bottom" constant="8" id="c-csv-t"/>
+                                <constraint firstItem="csv-01" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" id="c-csv-l"/>
+                                <constraint firstItem="ctv-01" firstAttribute="trailing" secondItem="csv-01" secondAttribute="trailing" id="c-csv-r"/>
+                                <constraint firstItem="rhl-02" firstAttribute="top" secondItem="csv-01" secondAttribute="bottom" constant="20" id="c-rhl-t"/>
+                                <constraint firstItem="rhl-02" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" constant="16" id="c-rhl-l"/>
+                                <constraint firstItem="ctv-01" firstAttribute="trailing" secondItem="rhl-02" secondAttribute="trailing" constant="16" id="c-rhl-r"/>
+                                <constraint firstItem="rcl-02" firstAttribute="top" secondItem="rhl-02" secondAttribute="bottom" constant="8" id="c-rcl-t"/>
+                                <constraint firstItem="rcl-02" firstAttribute="leading" secondItem="ctv-01" secondAttribute="leading" constant="16" id="c-rcl-l"/>
+                                <constraint firstItem="ctv-01" firstAttribute="trailing" secondItem="rcl-02" secondAttribute="trailing" constant="16" id="c-rcl-r"/>
+                                <constraint firstItem="ctv-01" firstAttribute="bottom" secondItem="rcl-02" secondAttribute="bottom" constant="16" id="c-rcl-b"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ctv-01" firstAttribute="top" secondItem="scv-01" secondAttribute="top" id="c-ctv-t"/>
+                        <constraint firstItem="ctv-01" firstAttribute="leading" secondItem="scv-01" secondAttribute="leading" id="c-ctv-l"/>
+                        <constraint firstItem="scv-01" firstAttribute="trailing" secondItem="ctv-01" secondAttribute="trailing" id="c-ctv-r"/>
+                        <constraint firstItem="scv-01" firstAttribute="bottom" secondItem="ctv-01" secondAttribute="bottom" id="c-ctv-b"/>
+                    </constraints>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btc-01">
+                    <rect key="frame" x="0.0" y="786" width="393" height="66"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcb-01">
+                            <rect key="frame" x="16" y="8" width="361" height="50"/>
+                            <color key="backgroundColor" red="0.90196078431372551" green="0.16078431372549021" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="c-rcb-h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <state key="normal" title="Recomendar">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="recommendTapped:" destination="-1" eventType="touchUpInside" id="act-rcb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.12941176470588237" green="0.14509803921568629" blue="0.18039215686274511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="rcb-01" firstAttribute="top" secondItem="btc-01" secondAttribute="top" constant="8" id="c-rcb-t"/>
+                        <constraint firstItem="rcb-01" firstAttribute="leading" secondItem="btc-01" secondAttribute="leading" constant="16" id="c-rcb-l"/>
+                        <constraint firstItem="btc-01" firstAttribute="trailing" secondItem="rcb-01" secondAttribute="trailing" constant="16" id="c-rcb-r"/>
+                        <constraint firstItem="btc-01" firstAttribute="bottom" secondItem="rcb-01" secondAttribute="bottom" constant="8" id="c-rcb-b"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkb-01">
+                    <rect key="frame" x="8" y="59" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="c-bkb-w"/>
+                        <constraint firstAttribute="height" constant="44" id="c-bkb-h"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="backTapped:" destination="-1" eventType="touchUpInside" id="act-bkb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvb-01">
+                    <rect key="frame" x="341" y="59" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="c-fvb-w"/>
+                        <constraint firstAttribute="height" constant="44" id="c-fvb-h"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="favoriteTapped:" destination="-1" eventType="touchUpInside" id="act-fvb"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="aci-01">
+                    <rect key="frame" x="178" y="408" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.12941176470588237" green="0.14509803921568629" blue="0.18039215686274511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="scv-01" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="c-scv-t"/>
+                <constraint firstItem="scv-01" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c-scv-l"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="trailing" secondItem="scv-01" secondAttribute="trailing" id="c-scv-r"/>
+                <constraint firstItem="scv-01" firstAttribute="bottom" secondItem="btc-01" secondAttribute="top" id="c-scv-b"/>
+                <constraint firstItem="btc-01" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="c-btc-l"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="trailing" secondItem="btc-01" secondAttribute="trailing" id="c-btc-r"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="btc-01" secondAttribute="bottom" id="c-btc-b"/>
+                <constraint firstItem="bkb-01" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="c-bkb-t"/>
+                <constraint firstItem="bkb-01" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="c-bkb-l"/>
+                <constraint firstItem="fvb-01" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="c-fvb-t"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="trailing" secondItem="fvb-01" secondAttribute="trailing" constant="8" id="c-fvb-r"/>
+                <constraint firstItem="aci-01" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c-aci-cx"/>
+                <constraint firstItem="aci-01" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="c-aci-cy"/>
+                <constraint firstItem="ctv-01" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="c-ctv-w"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="75"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

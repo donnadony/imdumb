@@ -1,0 +1,56 @@
+{
+  "id": 550,
+  "title": "El club de la pelea",
+  "overview": "Un empleado de oficina insomne y un fabricante de jabón despreocupado forman un club de lucha clandestino que se convierte en algo mucho más.",
+  "poster_path": "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+  "backdrop_path": "/hZkgoQYus5dXo3H8T7Uef6DNknx.jpg",
+  "vote_average": 8.433,
+  "release_date": "1999-10-15",
+  "runtime": 139,
+  "genres": [
+    {"id": 18, "name": "Drama"},
+    {"id": 53, "name": "Suspense"},
+    {"id": 35, "name": "Comedia"}
+  ],
+  "credits": {
+    "cast": [
+      {
+        "id": 819,
+        "name": "Edward Norton",
+        "character": "The Narrator",
+        "profile_path": "/5XBzD5WuTyVQZeS4IV6zGbt0LE0.jpg"
+      },
+      {
+        "id": 287,
+        "name": "Brad Pitt",
+        "character": "Tyler Durden",
+        "profile_path": "/cckcYc2v0yh1tc9QjRelptcOBko.jpg"
+      },
+      {
+        "id": 1283,
+        "name": "Helena Bonham Carter",
+        "character": "Marla Singer",
+        "profile_path": "/DDeITcCpnBd0CkAIRPhggyc8Hl.jpg"
+      },
+      {
+        "id": 7470,
+        "name": "Meat Loaf",
+        "character": "Robert 'Bob' Paulson",
+        "profile_path": "/7gKLR1r3NfAVfM3KzGhpEBgpLNd.jpg"
+      },
+      {
+        "id": 7499,
+        "name": "Jared Leto",
+        "character": "Angel Face",
+        "profile_path": "/msugySeTCyCmlRYtyoj3MaWo9Ew.jpg"
+      }
+    ]
+  },
+  "images": {
+    "backdrops": [
+      {"file_path": "/hZkgoQYus5dXo3H8T7Uef6DNknx.jpg"},
+      {"file_path": "/hZkgoQYus5dXo3H8T7Uef6DNknx.jpg"},
+      {"file_path": "/hZkgoQYus5dXo3H8T7Uef6DNknx.jpg"}
+    ]
+  }
+}
